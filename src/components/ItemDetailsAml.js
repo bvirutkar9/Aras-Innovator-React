@@ -44,12 +44,12 @@ const ItemDetailsAml = async (itemtype) => {
     const data = await sendItemRequest(itemtype);
     const itemList = document.getElementById('itemlist');
     //debugger
-    if (data && Array.isArray(data.value)) {
+    if (data.Item && Array.isArray(data.Item)) {
         // Clear the existing items before appending new ones (optional)
         itemList.innerHTML = '';
 
         // Loop through the data and create <li> elements
-        data.value.forEach(item => {
+        data.Item.forEach(item => {
             const li = document.createElement('li');  // Create a new <li> element
             li.textContent = item.keyed_name || 'No Name Available';  // Set the text of <li>
             itemList.appendChild(li);  // Append the <li> to the <ul>

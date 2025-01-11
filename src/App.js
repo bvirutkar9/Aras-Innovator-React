@@ -31,17 +31,19 @@ function App() {
     const fetchData = debounce(async () => {
         if (inputValue) {
             // Fetch data based on the current input value
+            //const temp = 'sg_cwo'  //temperary itemtype name
             const response = await ItemDetailsAml(inputValue);
 
             // Assuming response is an object with a property `value` that holds the array of data
             if (response && Array.isArray(response.value)) {
                 // Append the new data to the existing data list
+                debugger;
                 setData((prevData) => [...prevData, ...response.value]);
             } else {
                 console.error('Response is not in the expected format:', response);
             }
         }
-    }, 1000);
+    }, 100);
 
     // Run the debounced fetch function when the input value changes
     useEffect(() => {
