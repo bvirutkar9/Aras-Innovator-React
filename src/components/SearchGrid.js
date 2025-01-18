@@ -28,31 +28,11 @@ const SearchGrid = ({ data }) => {
   };
 
   return (
-    <div style={{ width: "100%", height: "500px", backgroundColor: "#5FB7E0" }}>
-      <div style={{ marginBottom: "10px", padding: "10px" }}>
-        <input
-          type="text"
-          placeholder="Search..."
-          onChange={onQuickFilterChange}
-          style={{
-            width: "100%",
-            padding: "10px",
-            fontSize: "16px",
-            borderRadius: "4px",
-            border: "1px solid #ccc",
-            backgroundColor: "#fff",
-          }}
-        />
+    <div className="search-grid-container">
+      <div className="search-bar">
+        <h3>BinaryTouch</h3>
       </div>
-      <div
-        className="ag-theme-alpine"
-        style={{
-          height: "100%",
-          width: "100%",
-          backgroundColor: "#fff",
-          boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
-        }}
-      >
+      <div className="ag-theme-alpine search-grid">
         <AgGridReact
           rowData={data}
           columnDefs={columns}
@@ -60,6 +40,7 @@ const SearchGrid = ({ data }) => {
             sortable: true,
             filter: true,
             resizable: true,
+            editable:false,
           }}
           pagination={true}
           paginationPageSize={5}
@@ -67,6 +48,7 @@ const SearchGrid = ({ data }) => {
           headerHeight={40}
           rowHeight={30}
           rowStyle={{ fontSize: "14px" }}
+          suppressDragLeaveHidesColumns={true} 
         />
       </div>
     </div>

@@ -1,5 +1,8 @@
+/* General App Styles */
 .App {
   text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #e3f2fd, #f7f7f7); /* Soft gradient background */
 }
 
 .App-logo {
@@ -7,32 +10,93 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background: linear-gradient(to right, #3498db, #6dd5fa, #2980b9); /* Modern blue gradient */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff; /* White text */
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 0 0 16px 16px;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #1abc9c; /* Greenish-blue link color */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* App Header */
+.App-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff; /* White text */
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+/* SearchGrid Styles */
+.search-grid-container {
+  width: 100%;
+  max-width: 1450px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #ffffff; /* White background */
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar {
+  margin-bottom: 15px;
+  text-align: center;
+  background: linear-gradient(to right, #f7f7f7, #e8f5e9); /* Soft gray-green gradient */
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.search-input {
+  width: 40%;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3b82f6; /* Modern blue focus */
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); /* Glow effect */
+}
+
+.search-grid {
+  height: 550px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App-header h1 {
+    font-size: 2rem;
+  }
+
+  .search-input {
+    width: 80%;
+    padding: 10px;
   }
 }

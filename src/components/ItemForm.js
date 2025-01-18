@@ -3,8 +3,11 @@ import PropTypes from "prop-types";
 
 const KeyValueVisualizer = ({ data }) => {
   return (
-    <div style={styles.container}>
-      <h3 style={styles.title}>Key-Value Data</h3>
+
+    <div className="search-grid-container">
+      <div className="search-bar">
+        <h3>BinaryTouch</h3>
+      </div>
       <div style={styles.listContainer}>
         {Object.entries(data).map(([key, value], index) => (
           <div key={index} style={styles.item}>
