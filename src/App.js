@@ -11,6 +11,7 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community';
 import { ItemSearchData } from './services/arasAmlService';
+import HomePage from './components/HomePage';
 
 // Then use it in your JSX
 
@@ -52,27 +53,31 @@ function App() {
      }, []); // Empty dependency array ensures this runs only once
 
 
-  return (
+    return (
+        <div>
+            <HomePage />  
+        </div>
+      
 
-      //<div>
-      //    <h1 style={{ textAlign: "center" }}>React App for Aras Data</h1>
-      //    {/* Pass the fetched data to KeyValueVisualizer */}
-      //    {ItemSampleData ? (
-      //        <KeyValueVisualizer data={ItemSampleData} />
-      //    ) : (
-      //        <p>Loading data...</p>
-      //    )}
-      //</div>
-    <div>
-      <h1 style={{ textAlign: "center" }}> BinaryTouch </h1>
-        {
-            SearchGridData ? (
-                <SearchGrid data={SearchGridData} />
-            ) : (
-                <p>Loading data...</p>
-            )
-        }
-    </div>
+    //  <div>
+    //     <h1 style={{ textAlign: "center" }}>React App for Aras Data</h1>
+    //      {/* Pass the fetched data to KeyValueVisualizer */}
+    //     {ItemSampleData ? (
+    //          <KeyValueVisualizer data={ItemSampleData} />
+    //      ) : (
+    //          <p>Loading data...</p>
+    //      )}
+    //  </div>
+    //<div>
+    //    <h1 style={{ textAlign: "center" }}> BinaryTouch </h1>
+    //    {
+    //        SearchGridData ? (
+    //            <SearchGrid data={SearchGridData} />
+    //        ) : (
+    //            <p>Loading data...</p>
+    //        )
+    //    }
+    //</div>
     
   );
 }
