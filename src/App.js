@@ -53,14 +53,7 @@ function App() {
 
 
   return (
-<<<<<<< Updated upstream
-    // <div>
-    //   <KeyValueVisualizer data={ItemsampleData} />
-    // </div>
-    <div>
-      {/* <h1 style={{ textAlign: "center" }}> BinaryTouch </h1> */}
-      <SearchGrid data={SearchGridData} />
-=======
+
       //<div>
       //    <h1 style={{ textAlign: "center" }}>React App for Aras Data</h1>
       //    {/* Pass the fetched data to KeyValueVisualizer */}
@@ -79,7 +72,6 @@ function App() {
                 <p>Loading data...</p>
             )
         }
->>>>>>> Stashed changes
     </div>
     
   );
