@@ -12,7 +12,7 @@
 
 .App-header {
   background: linear-gradient(to right, #3498db, #6dd5fa, #2980b9); /* Modern blue gradient */
-  min-height: 100vh;
+  min-height: 500vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,21 +44,22 @@
 /* SearchGrid Styles */
 .search-grid-container {
   width: 100%;
-  max-width: 1450px;
-  margin: 10px auto;
-  padding: 10px;
+  max-width: 98%;
+  margin: 8px auto;
+  padding: 8px;
   background-color: #ffffff; /* White background */
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .search-bar {
-  margin-bottom: 15px;
+  margin-bottom: 8px;
+  max-height: max-content;
   text-align: center;
   background: linear-gradient(to right, #f7f7f7, #e8f5e9); /* Soft gray-green gradient */
-  padding: 15px;
-  border-radius: 12px;
+  padding: 10px;
+  border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
@@ -116,3 +117,4 @@
   border: 1px solid #007bff; /* Input border color */
   border-radius: 4px;
 }
+
