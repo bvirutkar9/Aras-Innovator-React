@@ -9,6 +9,8 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community';
 
+// Then use it in your JSX
+
 // Register all Community features
 ModuleRegistry.registerModules([AllCommunityModule]);
 function App() {
@@ -572,13 +574,10 @@ function App() {
 
   return (
     // <div>
-    //   <h1 style={{ textAlign: "center" }}>React App for Aras Data</h1>
-    //   {/* Pass the data as a prop to the KeyValueVisualizer */}
     //   <KeyValueVisualizer data={ItemsampleData} />
     // </div>
     <div>
-      <h1 style={{ textAlign: "center" }}> BinaryTouch </h1>
-      {/* Pass the array data to the SearchGrid */}
+      {/* <h1 style={{ textAlign: "center" }}> BinaryTouch </h1> */}
       <SearchGrid data={SearchGridData} />
     </div>
     
