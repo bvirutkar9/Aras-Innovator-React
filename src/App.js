@@ -10,10 +10,9 @@ import LoginPage from './components/LoginPage';
 
 function App() {
 
-    const isLogin = true;
+    const isLogin = false;
     return (
         <div>
-            <HomePage />  
             {isLogin ? (
                   <HomePage  />
               ) : (
