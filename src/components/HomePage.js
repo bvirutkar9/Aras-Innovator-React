@@ -12,8 +12,6 @@ import 'ag-grid-community/styles/ag-theme-alpine.css';
 import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community';
 import { ItemSearchData } from '../services/arasAmlService';
 
-// Then use it in your JSX
-
 // Register all Community features
 ModuleRegistry.registerModules([AllCommunityModule]);
 function HomePage() {
@@ -54,25 +52,25 @@ function HomePage() {
 
     return (
 
-        //<div>
-        //    <h1 style={{ textAlign: "center" }}>React App for Aras Data</h1>
-        //    {/* Pass the fetched data to KeyValueVisualizer */}
-        //    {ItemSampleData ? (
-        //        <KeyValueVisualizer data={ItemSampleData} />
-        //    ) : (
-        //        <p>Loading data...</p>
-        //    )}
-        //</div>
         <div>
-          <h1 style={{ textAlign: "center" }}> BinaryTouch </h1>
-            {
-                SearchGridData ? (
-                    <SearchGrid data={SearchGridData} />
-                ) : (
-                    <p>Loading data...</p>
-                )
-            }
+            <h1 style={{ textAlign: "center" }}>React App for Aras Data</h1>
+            {/* Pass the fetched data to KeyValueVisualizer */}
+            {ItemSampleData ? (
+                <KeyValueVisualizer data={ItemSampleData} />
+            ) : (
+                <p>Loading data...</p>
+            )}
         </div>
+        //<div>
+        //  <h1 style={{ textAlign: "center" }}> BinaryTouch </h1>
+        //    {
+        //        SearchGridData ? (
+        //            <SearchGrid data={SearchGridData} />
+        //        ) : (
+        //            <p>Loading data...</p>
+        //        )
+        //    }
+        //</div>
 
     );
 }
