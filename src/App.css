@@ -100,3 +100,19 @@
     padding: 10px;
   }
 }
+
+.ag-theme-alpine .ag-filter-body {
+  background-color: #f4f4f4; /* Change filter panel background */
+}
+
+.ag-theme-alpine .ag-filter-apply-panel-button {
+  background-color: #007bff; /* Change button background */
+  color: white; /* Button text color */
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.ag-theme-alpine .ag-filter-input {
+  border: 1px solid #007bff; /* Input border color */
+  border-radius: 4px;
+}

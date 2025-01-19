@@ -573,13 +573,13 @@ function App() {
   ];
 
   return (
-    <div>
-      <KeyValueVisualizer data={ItemsampleData} />
-    </div>
     // <div>
-    //   {/* <h1 style={{ textAlign: "center" }}> BinaryTouch </h1> */}
-    //   <SearchGrid data={SearchGridData} />
+    //   <KeyValueVisualizer data={ItemsampleData} />
     // </div>
+    <div>
+      {/* <h1 style={{ textAlign: "center" }}> BinaryTouch </h1> */}
+      <SearchGrid data={SearchGridData} />
+    </div>
     
   );
 }
