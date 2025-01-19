@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const KeyValueVisualizer = ({ data }) => {
+const KeyValueVisualizer = ({data} ) => {
   return (
 
     <div className="search-grid-container">

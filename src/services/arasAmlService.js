@@ -34,6 +34,54 @@ export const sendReportRequest = async (itemtype) => {
 };
 
 
+// Function to get itemtype report to Aras Innovator
+export const ItemFormData = async (itemtype_name, itemtype_id) => {
+
+    try {
+
+        const payload = {
+            param1: itemtype_name,
+            param2: itemtype_id
+        };
+        const response = await axios.post(`${ARAS_BASE_URL}/server/odata/method.hc_aras_react_itemform`, payload, {
+
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': ARAS_API_TOKEN, // Replace with actual token
+            },
+        });
+
+
+
+        return response.data;
+    } catch (error) {
+        console.error('Error sending AML request to Aras:', error);
+    }
+};
+
+// Function to get itemtype report to Aras Innovator
+export const ItemSearchData = async (itemtype_name) => {
+
+try {
+
+    const payload = {
+        param1: itemtype_name
+    };
+    const response = await axios.post(`${ARAS_BASE_URL}/server/odata/method.hc_aras_react_searchgird`, payload, {
+
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': ARAS_API_TOKEN, // Replace with actual token
+        },
+    });
+
+
+
+    return response.data;
+} catch (error) {
+    console.error('Error sending AML request to Aras:', error);
+}
+};
 
 //function to get list of the reports
 export const getReportList = async () => {
