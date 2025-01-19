@@ -90,7 +90,7 @@ export const ItemFormData = async (itemtype_name, itemtype_id) => {
 export const ItemSearchData = async (itemtype_name) => {
 
 try {
-
+    debugger
     const payload = {
         param1: itemtype_name
     };
@@ -111,16 +111,19 @@ try {
 };
 
 //function to get list of the reports
-export const getReportList = async () => {
+export const getReportList = async (itemtype) => {
 
     try {
-        
-       
+
+        const payload = {
+            param1: itemtype
+
+        };
         console.time('Request Duration');
-        const response_list = await axios.get(`${ARAS_BASE_URL}/server/odata/ItemType`, {
+        const response = await axios.post(`${ARAS_BASE_URL}/server/odata/method.hc_aras_react_method`, payload, {
 
             headers: {
-                'Content-Type': 'application/text',
+                'Content-Type': 'application/json',
                 'Authorization': ARAS_API_TOKEN, // Replace with actual token
             },
         });
@@ -128,8 +131,9 @@ export const getReportList = async () => {
 
 
 
-        return response_list.data;
+        return response.data;
     } catch (error) {
         console.error('Error sending AML request to Aras:', error);
     }
 };
+

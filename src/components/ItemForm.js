@@ -5,9 +5,7 @@ const KeyValueVisualizer = ({data} ) => {
   return (
 
     <div className="search-grid-container">
-      <div className="search-bar">
-        <h3>BinaryTouch</h3>
-      </div>
+
       <div style={styles.listContainer}>
         {Object.entries(data).map(([key, value], index) => (
           <div key={index} style={styles.item}>

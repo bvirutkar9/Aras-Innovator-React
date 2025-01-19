@@ -10,12 +10,16 @@ function LoginPage({ onLoginSuccess }) {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
+            debugger
             const hash_pass = crypto.MD5(password).toString(crypto.enc.Hex); 
             const data = await LoginToken(username, hash_pass);
             if (data) {
                 setError(null);
                 console.log('Token:', data.access_token);
                 onLoginSuccess(); // Notify parent component of successful login
+            }
+            else {
+                setError('Login failed. Please check your credentials.');
             }
         } catch (err) {
             setError('Login failed. Please check your credentials.');

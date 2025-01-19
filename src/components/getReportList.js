@@ -5,11 +5,13 @@ import { getReportList } from '../services/arasAmlService';
 
 
 
-const reportList = async () => {
+const reportList = async (itemtype) => {
     // Make an API call to get the filtered data (replace with your actual API call)
-    const data = await getReportList();
+    debugger
+    const data = await getReportList(itemtype);
+    const report_name = data.Item.map((item) => item.name);
 
-    return data; // Assuming data is an array of items
+    return report_name; // Assuming data is an array of items
 };
 
 export default reportList;
