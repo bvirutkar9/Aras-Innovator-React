@@ -9,14 +9,16 @@ import HomePage from './components/HomePage';
 import LoginPage from './components/LoginPage';
 
 function App() {
-
-    const isLogin = false;
+    const [isLogin, setIsLogin] = useState(false);
+    const handleLoginSuccess = () => {
+        setIsLogin(true);
+    };
     return (
         <div>
             {isLogin ? (
                   <HomePage  />
               ) : (
-                  <LoginPage  />
+                    <LoginPage onLoginSuccess={handleLoginSuccess} />
               )}
         </div>
     

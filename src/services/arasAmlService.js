@@ -5,6 +5,33 @@
 import axios from 'axios';
 const ARAS_BASE_URL = process.env.REACT_APP_ARAS_BASE_URL;
 const ARAS_API_TOKEN = process.env.REACT_APP_ARAS_API_TOKEN;
+const DB_NAME = process.env.REACT_APP_DB;
+export const LoginToken = async (username, password) => {
+    try {
+
+        console.time('Request Duration');
+        const response = await axios.post(`${ARAS_BASE_URL}OAuthServer/connect/token`, {
+            grant_type: "password",
+            scope: "Innovator",
+            client_id: "IOMApp",
+            username: username,
+            password: password,
+            database: "31Demo"
+        }, {
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            }
+        });
+        console.timeEnd('Request Duration');
+
+
+
+        return response.data;
+    } catch (error) {
+        console.error('Error getting token:', error);
+    }
+};
+
 
 // Function to get itemtype report to Aras Innovator
 export const sendReportRequest = async (itemtype) => { 
